@@ -1,0 +1,19 @@
+.row{
+    padding: 10px;
+}
+/*color para el cuerpo acerca de*/
+div{
+    background-color: #1597F7;
+    
+}
+
+@media (min-width: 576px){
+    
+}
+
+#nombre{
+    font-size: large;
+    font-weight: bold;
+    margin-top: 20%;
+    margin-left: 5px;
+}
