@@ -2,14 +2,50 @@
     padding: 10px;
 }
 /*color para el cuerpo acerca de*/
+
 div{
     background-color: #1597F7;
     
 }
 
 @media (min-width: 576px){
-    
+    #fotoPerfil{
+        position: absolute;
+        width: 15%;
+        border-radius: 100%;
+        box-shadow: 3px 3px 3px darkblue;
+        left: 2%;
+        top: 600px;
+    }
 }
+
+@media (max-width: 576px){
+    #fotoPerfil{
+
+        position: absolute;
+        width: 50%;
+        border-radius: 100%;
+        box-shadow: 3px 3px 3px darkblue;
+        left: 25%;
+        top: 650px;
+    }
+
+    #info{
+        position: relative;
+        text-align: center;
+        top: 250px;
+    }
+
+    #descripcion{
+        position: relative;
+        width: 100%;
+        top: 249px;
+    }
+
+
+
+}
+
 
 #nombre{
     font-size: large;
@@ -17,3 +53,6 @@ div{
     margin-top: 20%;
     margin-left: 5px;
 }
+
+
+
