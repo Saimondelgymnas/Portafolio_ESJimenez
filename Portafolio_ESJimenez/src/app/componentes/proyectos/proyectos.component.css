@@ -1,0 +1,15 @@
+.row{
+    padding: 10px;
+    background-color: #1597F7;
+}
+.container{
+    width: auto;
+}
+.textop, .imagenp{
+    display: inline-block;
+    text-align: justify;
+    
+}
+.imagenp{
+    box-shadow: 8px 8px 30px gray;
+}
