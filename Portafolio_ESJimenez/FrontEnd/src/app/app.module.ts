@@ -13,6 +13,9 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
 import { PorcentajesComponent } from './componentes/porcentajes/porcentajes.component';
 import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
 import { FooterComponent } from './componentes/footer/footer.component';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
+
+
 
 @NgModule({
   declarations: [
@@ -25,7 +28,8 @@ import { FooterComponent } from './componentes/footer/footer.component';
     EducacionComponent,
     PorcentajesComponent,
     ProyectosComponent,
-    FooterComponent
+    FooterComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -36,9 +40,8 @@ import { FooterComponent } from './componentes/footer/footer.component';
       innerStrokeWidth: 8,
       outerStrokeColor: "#78C000",
       innerStrokeColor: "#C7E596",
-      animationDuration: 300,
-    })
-
+      animationDuration: 300,}),
+      HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

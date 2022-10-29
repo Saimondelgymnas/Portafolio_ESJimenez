@@ -216,6 +216,12 @@ button:hover::after {
 
 /*para que salga en celulares */
 
+
+
+
+
+
+
 @media(max-width: 761px){
     .container{
         flex-direction: column;
