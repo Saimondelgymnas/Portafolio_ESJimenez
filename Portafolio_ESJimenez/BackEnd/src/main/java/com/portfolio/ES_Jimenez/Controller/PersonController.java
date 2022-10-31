@@ -4,6 +4,7 @@ import com.portfolio.ES_Jimenez.Entity.Person;
 import com.portfolio.ES_Jimenez.Interface.IPersonService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,14 +26,14 @@ public class PersonController {
     public List<Person> getPerson() {
         return ipersonService.getPerson();
     }
-
+    @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/persons/crear")
     public String createPerson(@RequestBody Person person) {
         ipersonService.savePerson(person);
         return "Persona guardada";
 
     }
-
+    @PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping("/persons/borrar/{id}")
     public String deletePerson(@PathVariable Long id) {
         ipersonService.deletePerson(id);
@@ -40,6 +41,7 @@ public class PersonController {
     }
 
     //Por ejemplo: PUERTO/persons/editar/"aca va la id"/nombre & apellido & img
+    @PreAuthorize("hasRole('ADMIN')")
     @PutMapping("/persons/editar/{id}")
     public Person editPersona(@PathVariable Long id,
             @RequestParam("nombre") String nuevoNombre,

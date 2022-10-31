@@ -17,15 +17,26 @@
         </div>
         
         
-        <button> <a href="/login">LOGIN
+        <button (click)="login()" *ngIf="!isLogged"> LOGIN
             <style type="text/css">
                 a:link {text-decoration-line: none; color: white;}      /* unvisited link */
                 a:visited {text-decoration-line: none; color: white;}   /* visited link */
                 a:hover {text-decoration-line: none; color: white;}     /* mouse over link */
                 a:active {text-decoration-line: none; color: white;}    /* selected link */
              </style>
-        </a>
+        
         </button>
+
+        <button (click)="onLogOut()" *ngIf="isLogged"> LOGOUT
+            <style type="text/css">
+                a:link {text-decoration-line: none; color: white;}      /* unvisited link */
+                a:visited {text-decoration-line: none; color: white;}   /* visited link */
+                a:hover {text-decoration-line: none; color: white;}     /* mouse over link */
+                a:active {text-decoration-line: none; color: white;}    /* selected link */
+             </style>
+        
+        </button>
+
 
 
 
